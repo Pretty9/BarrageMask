@@ -103,9 +103,9 @@ function stopTask(task) {
 function alignMask() {
     return setInterval(function() {
         let vTime = video.currentTime;
-        let mTime = mask.currentTime;
+        let mTime = mask.currentTime - 0.2;
         if(Math.abs(vTime - mTime) > 0.1) {
-            mask.currentTime = video.currentTime;
+            mask.currentTime = video.currentTime + 0.2;
         }
     }, 500);
 }
